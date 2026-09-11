@@ -14,7 +14,7 @@ function AddTodo({ onAdd }) {
 
         try {
             const response = await axios.post(
-                'http://127.0.0.1:8000/api/backapp/',
+                'https://djangobackend-d9dq.onrender.com/api/backapp/',
                 {
                     title: title,
                     completed: false

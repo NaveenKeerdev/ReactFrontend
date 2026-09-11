@@ -6,7 +6,7 @@ function TodoList({ todos, setTodos }) {
     const handleDone = async (todo) => {
         try {
             const response = await axios.patch(
-                `http://127.0.0.1:8000/api/backapp/${todo.id}/`,
+                `https://djangobackend-d9dq.onrender.com/api/backapp/${todo.id}/`,
                 {
                     completed: !todo.completed
                 }
@@ -26,7 +26,7 @@ function TodoList({ todos, setTodos }) {
     const handleDelete = async (id) => {
         try {
             await axios.delete(
-                `http://127.0.0.1:8000/api/backapp/${id}/`
+                `https://djangobackend-d9dq.onrender.com/api/backapp/${id}/`
             );
 
             setTodos(

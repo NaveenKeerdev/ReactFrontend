@@ -8,7 +8,7 @@ function App() {
 
     useEffect(() => {
         axios
-            .get('http://127.0.0.1:8000/api/backapp/')
+            .get('https://djangobackend-d9dq.onrender.com/api/backapp/')
             .then(res => setTodos(res.data))
             .catch(err => console.error(err));
     }, []);
